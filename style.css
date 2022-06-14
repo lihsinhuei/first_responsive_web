@@ -1,0 +1,142 @@
+body  {
+	width: 100%;
+	height: 100%;
+    margin: auto 0;
+    font-family: 'Nuosu SIL', serif;
+}
+
+.container{
+	display: grid;
+	grid-template-rows:auto;
+}
+
+.zone{
+	display: grid;
+}
+
+
+
+ul {
+	display:grid ;
+	background-color: #6c63ff;
+	padding: 0 90px;
+	column-gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr 2fr;
+    /*Grid-template-columns: repeat(3,minmax(100px,120px)) repeat(1,minmax(150px,1fr));*/
+    /*position: fixed; 
+	width: 100%;*/
+	margin: auto 0;
+	/*position: fixed;*/
+
+}
+
+
+.nav_item {
+	font-size: 1.2em;
+	color: white;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+/*screen可以改成print or 其他值，但90%機率只會用screen。
+螢幕寬度最大值600px(也就是寬度不足600px)的狀況下，改用另一種設定顯示。*/
+@media only screen and (max-width: 600px) {
+	.nav_item {
+		font-size: 1em;
+	}
+	.ul {
+	    column-gap: 5px;
+	    Grid-template-columns: repeat(3,minmax(70px,100px)) repeat(1,minmax(70px,1fr));	
+	    position: sticky;
+	    width: 100%;	
+	    justify-content: space-around;
+        align-items: center;
+	}
+		
+}
+
+
+.nav_right {
+	justify-self: right ;
+    display: inline-block;
+
+}
+
+.cover {
+	background-color: white;
+	/*圖片至中方式二 Flex*/
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-wrap: wrap;   
+
+}
+
+.mainpicture {
+    /*圖片至中方式一 普通CSS*/
+/*	display: block;
+ 	width: 40%;   如果要設定佔螢幕高度50%，則為 height: 50vh;   vh=viewport height
+ 	min-width:400px;
+ 	margin-right: auto;
+ 	margin-left: auto;
+*/
+    /*圖片至中方式二 Flex*/
+    width: 50%;
+
+}
+
+
+
+.grid-container {
+	display: grid;
+	background-color:lightgray;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
+/*	flex-wrap: wrap; */                 /*  allow items to wrap  */
+	/*justify-content: center;*/
+	padding: 30px 30px;
+    /*align-items: center;*/
+	/*grid-template-rows:minmax(300px, auto) ;*/
+
+}
+
+.product-grid {
+	/*margin: 10px 10px;*/
+	padding: 70px;
+	background-color: #6c63ff;
+	/*margin: 20px;*/
+	transition:transform 0.4s;
+}
+
+.product-grid:hover {
+	transform: rotate(-7deg);
+
+}
+
+.product-img {
+	display: block;
+	width: 100%;
+	/*margin:0 auto;*/
+ 	/*margin-left: auto;*/
+	/*margin: 10px 10px;*/
+	transition:transform 0.4s;
+}
+
+.product-img:hover {
+	transform: scale(1.1);
+}
+
+
+
+footer {
+	background-color: #6c63ff;
+	height: 100px;
+	color: white;
+	font-size: 2em;
+	text-align: center; 
+
+}
