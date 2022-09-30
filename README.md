@@ -1,1 +1,2 @@
-# first_responsive_web
+# responsive web practise template
+## Using CSS grid
